@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "College Login Helper",
+  "version": "1.0",
+  "description": "Autofills login credentials for supported college portals.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://YOUR-COLLEGE-URL/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://YOUR-COLLEGE-URL/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
